@@ -1,0 +1,4 @@
+MarketcoinWhitepaper
+====================
+
+Whitepaper for Marketcoin
