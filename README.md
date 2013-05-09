@@ -18,10 +18,22 @@ Everything -> Marketcoin and Marketcoin -> Everything (but not Everything -> Eve
 
 Transactions in Marketcoin differ from those of Bitcoin-like systems. A transaction is broken down into three parts, and is not finalised until all of those parts are present in the blockchain. The first two are matching orders; that being an order to buy Altcoin for the maximum price of m, and an order to sell Altcoin at the minimum price of n, with n <= m. These are combined to form the beginning of a transaction, and are recorded simultaneously in the blockchain. The exchange algorithm is such that any two nodes will always produce the same matching orders from the same input (the block). Both orders include the public key of each party member. At this stage, the transaction is not yet finalised. For finalisation to occur the buyer of Marketcoin must provide a signed transaction for the agreed upon amount from their public key on the altcoin network, to the seller's public key. This alone does not provide proof of payment, to combat this a reference to the block the transaction was published in is also required. After this, control over the disbursement of the kets purchased is granted. Control over the disbursement of the kets is removed once an order is included for their sale in a block.
 
-To combat users reniging on trades and locking up others' money a timeout is placed on every transaction; if it is not finalised within a certain number of blocks (of the currency-pair), the transaction is disregarded and control of the disbursement of funds is returned to the seller.
+To combat users reneging on trades and locking up others' money a timeout is placed on every transaction; if it is not finalised within a certain number time (or number of blocks, to be decided), the transaction is disregarded and control of the disbursement of funds is returned to the seller.
 
-As the finalisation of the transfer is the complete onus of the buyer...
+As there only needs to be one party to complete any actions after the orders are matched the finalisation of the transfer is the complete onus of the buyer. 
 
+
+## Issues
+
+Some counter-party risk assumed by seller of Marketcoin; none for buyer unless prevented sending tx on altcoin network (51% attack). 
+
+Timeouts might conflict if altcoin takes too long to produce blocks. Support must be general. Perhaps doing a difficulty style adjustment based on number of blocks over last retarget period (measured in time). Will be weird if a block is produced in more time than the retarget takes (misses a retarget period). Probably not worth considering yet.
+
+Blockchain reorganisation on altcoin; if combined blockchain then it might invalidate later trades; perhaps lag time is placed on accepted block headers of altcoin in marketcoin blocks; like cannot be one of the most recent 6 blocks. How is that verified? Perhaps the limit is on how late after you can include the finalisation.
+
+OR
+
+Merged mining means a hash of the bitcoin block is in the marketcoin block header; the blocks are not invalid, just later become superfluous. When they are abandoned, the headers of the new section of the bitcoin blockchain is inserted in bulk into the marketcoin blockchain. marketcoin finalisations may become invalid on the bitcoin network, but will remain in play on the marketcoin network; they should be accepted as valid. This is an incentive for the buyer to send altcoin quickly, but wait to redeem the marketcoin for an hour or so to ensure there won't be a reorg on the altcoin blockchain. They can, however, choose to submit the finalisation when they choose. The client will warn of the risk of zero-conf finalisation.
 
 
 ## Refernces
