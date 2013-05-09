@@ -1,6 +1,8 @@
 # Marketcoin: A Peer-to-Peer Exchange System for Bitcoin-like Currencies
 
-Draft for public comment and contribution
+Draft for public comment and contribution.
+
+If you have any query or contibution in regards to this paper, please raise an issue. This includes but is not limited to: if something is not clear enough, or you think you've spotted something that needs to be considered.
 
 ## Abstract
 
