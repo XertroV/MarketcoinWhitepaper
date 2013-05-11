@@ -35,8 +35,25 @@ OR
 
 Merged mining means a hash of the bitcoin block is in the marketcoin block header; the blocks are not invalid, just later become superfluous. When they are abandoned, the headers of the new section of the bitcoin blockchain is inserted in bulk into the marketcoin blockchain. marketcoin finalisations may become invalid on the bitcoin network, but will remain in play on the marketcoin network; they should be accepted as valid. This is an incentive for the buyer to send altcoin quickly, but wait to redeem the marketcoin for an hour or so to ensure there won't be a reorg on the altcoin blockchain. They can, however, choose to submit the finalisation when they choose. The client will warn of the risk of zero-conf finalisation.
 
+* New currency pairs,
+* minimum difficulty? 1% of network? how to measure?
+* Trail period for volume?
+* But blockchain spam from weird new currencies.
+* Maybe whitelist of magicbits hardcoded? (bad soln, though leaning towards this atm)
+* Adding new currency would require a hardfork
+* Perhaps the number of markets available increases every year or so?
+* Allows a period for new cryptocurrencies to compete for spots - requirements on market volume by the end of a trial period?
+* Not sure if it can be done in a distributed fashion yet.
 
-## Refernces
+Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be)
+
+## Random Notes and Glossary
+
+* Market volume provides rough scaling between PoW systems.
+
+## References
+
+Satoshi - Bitcoin Whitepaper, 2008
 
 ## Authors:
 
