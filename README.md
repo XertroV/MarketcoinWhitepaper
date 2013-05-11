@@ -22,10 +22,21 @@ To combat users reneging on trades and locking up others' money a timeout is pla
 
 As there only needs to be one party to complete any actions after the orders are matched the finalisation of the transfer is the complete onus of the buyer. 
 
+## Proof-of-Work Chain (blockchain)
+
+Marketcoin has an odd blockchain; it is comprised of blocks produced by many different PoW systems; potentially a unique PoW system for every currency pair (it is whatever the Altcoin chooses).
+
+Each Marketcoin block links to the previous, regardless of the currency pair it was mine on. 
+
+Each block includes sequential headers of unincluded Altcoin blocks, upto some maximum.
+
+Each block MUST be merged mined with the Altcoin blockchain. Marketcoin has no native PoW system.
+
+More discussion is needed to figure out exactly what will happen with reorgs and possible attacks on this untested blockchain architecture.
 
 ## Issues
 
-Some counter-party risk assumed by seller of Marketcoin; none for buyer unless prevented sending tx on altcoin network (51% attack). 
+Some counter-party risk assumed by seller of Marketcoin; none for buyer unless prevented sending tx on altcoin network (51% attack), or including soln in marketcoin block.
 
 Timeouts might conflict if altcoin takes too long to produce blocks. Support must be general. Perhaps doing a difficulty style adjustment based on number of blocks over last retarget period (measured in time). Will be weird if a block is produced in more time than the retarget takes (misses a retarget period). Probably not worth considering yet.
 
@@ -45,7 +56,7 @@ Merged mining means a hash of the bitcoin block is in the marketcoin block heade
 * Allows a period for new cryptocurrencies to compete for spots - requirements on market volume by the end of a trial period?
 * Not sure if it can be done in a distributed fashion yet.
 
-Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be) blocks continaing the new magicbytes can be mined.
+Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be) blocks continaing the new magicbits can be mined.
 
 ## Random Notes and Glossary
 
