@@ -45,7 +45,7 @@ Merged mining means a hash of the bitcoin block is in the marketcoin block heade
 * Allows a period for new cryptocurrencies to compete for spots - requirements on market volume by the end of a trial period?
 * Not sure if it can be done in a distributed fashion yet.
 
-Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be)
+Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be) blocks continaing the new magicbytes can be mined.
 
 ## Random Notes and Glossary
 
