@@ -10,7 +10,7 @@ I spoke to Lindsay, Peter and Gavin about this idea during Bitcoin2013 and the u
 
 ## Proposal
 
-This application is seeking a grant from the Bitcoin Foundation in order to help facilitate (but not fund) the development of Marketcoin - a Bitcoin-like system which enables trustless exchange between crypto-currencies. The particular goal in mind is the construction of infrastructure needed to support an opensource project and the associated community modeled on the current relevant infrastructure supporting Bitcoin development and the Bitcoin community.
+This application is seeking a grant from the Bitcoin Foundation in order to help facilitate (but not fund) the development of Marketcoin - a Bitcoin-like system which enables trustless exchange between crypto-currencies. The particular goal in mind is the construction or hire of infrastructure needed to support an opensource project and the associated community modeled on the current infrastructure supporting Bitcoin development and the Bitcoin community. This will mostly be comprised of renting servers.
 
 ## Overview
 
@@ -26,9 +26,13 @@ Secondly, Bitcoin plays the most significant role in the crypto-currency communi
 
 Thirdly, Bitcoin has become as popular as it has due to its unique properties in the realm of currency. Marketcoin hopes to expand these properties into currency exchange. Such a groundbreaking application of Bitcoin technology will not only draw more attention to Bitcoin, but also further public debate on the issues of open currencies and currency systems. By providing proof of Bitcoin's potential outside the single application of a monetary system, the public image of Bitcoin will expand beyond monetary freedom and into the realm of financial, political and democratic freedom. This will not only cause the philosophy embedded within Bitcoin to be taken more seriously, but will foster innovation in elements of the Bitcoin network (such as blockchain structure, proof-of-work algorithms, interdependance of crypto-currencies, etc) which may later be utilised to improve security or mitigate potential attacks on the Bitcoin network.
 
-In summary, I believe Marketcoin has the potential to interact with Bitcoin on a number of symbiotic levels, from seeding innovation in Bitcoin-like systems (both technically and physically) to diversifying the range of attention and discussion devoted to Bitcoin from both a political and academic frame of reference.
+An example of this which may be of particular interest is the following: In the unfortunate circumstance the Bitcoin community becomes divided over an extremely controversial issue to the extent that something like 40% of the community use a client or protocol which is incompatible with the remaining 60%, the Bitcoin blockchain may be forked. Marketcoin would, in this situation, allow for transparent wealth reorganisation by facilitating trustless exchange between the two chains.
+
+In summary, I believe Marketcoin has the potential to interact with Bitcoin on a number of symbiotic levels, from fertilising innovation in Bitcoin-like systems (both technically and economically) to diversifying the range of attention and discussion devoted to Bitcoin from both a political and academic frame of reference.
 
 ## Needs Assessment
+
+
 
 ## Goals/Objectives
 

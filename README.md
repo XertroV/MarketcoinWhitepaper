@@ -14,9 +14,11 @@ Marketcoin intro and context
 
 Everything -> Marketcoin and Marketcoin -> Everything (but not Everything -> Everything)
 
+Marketcoin provides a better solution to the double coincidence of wants by allowing users to quickly and trustlessly exchange value between monetary systems. This allows the solutions to the double coincidence (monetary systems) to become separate and insulated, while being trivially connected at the same time. This means that both parties can deal in their currency of choice without any significant barriers to exchange goods and services for money.
+
 ## Orders and Transactions
 
-Transactions in Marketcoin differ from those of Bitcoin-like systems. A transaction is broken down into three parts, and is not finalised until all of those parts are present in the blockchain. The first two are matching orders; that being an order to buy Altcoin for the maximum price of m, and an order to sell Altcoin at the minimum price of n, with n <= m. These are combined to form the beginning of a transaction, and are recorded simultaneously in the blockchain. The exchange algorithm is such that any two nodes will always produce the same matching orders from the same input (the block). Both orders include the public key of each party member. At this stage, the transaction is not yet finalised. For finalisation to occur the buyer of Marketcoin must provide a signed transaction for the agreed upon amount from their public key on the altcoin network, to the seller's public key. This alone does not provide proof of payment, to combat this a reference to the block the transaction was published in is also required. After this, control over the disbursement of the kets purchased is granted. Control over the disbursement of the kets is removed once an order is included for their sale in a block.
+Transactions in Marketcoin differ from those of Bitcoin-like systems. A transaction is broken down into three parts, and is not finalised until all of those parts are present in the blockchain. The first two are matching orders; that being an order to buy Altcoin for the maximum price of m, and an order to sell Altcoin at the minimum price of n, with n <= m. These are combined to form the beginning of a transaction, and are recorded simultaneously in the blockchain. The exchange algorithm is such that any two nodes will always produce the same matching orders from the same input (the block). Both orders include the public key of each party member. At this stage, the transaction is not yet finalised. For finalisation to occur the buyer of Marketcoin must provide a signed transaction for the agreed upon amount from their public key on the altcoin network, to the seller's public key. This alone does not provide proof of payment, to combat this a reference to the block the transaction was published in is also required. After this, control over the disbursement of the kets (marketcoin units) purchased is granted. Control over the disbursement of the kets is removed once an order is included for their sale in a block.
 
 To combat users reneging on trades and locking up others' money a timeout is placed on every transaction; if it is not finalised within a certain number time (or number of blocks, to be decided), the transaction is disregarded and control of the disbursement of funds is returned to the seller.
 
@@ -29,6 +31,17 @@ At the matching stage of the buyer only a little information is known:
 * Amount each way
 
 To finalize this transaction (and avoid relaying excess data) the finalisation of the transaction takes place on Altcoin with a TX for the *amount* to *pubkey of seller*; then included in marketcoin blockchain as evidence (must have been in altcoin blockchain first; referenced through altcoin blockheaders included in MKC blockchain).
+
+### Cancelling orders
+
+An feature of any exchange is the ability to cancel orders. Marketcoin deals with this in two ways:
+
+* Firstly, a timeout: All orders broadcast to the Marketcoin network include the height of the last block they may be included in. That is to say you can provide a timeout for the order if it remains unfilled.
+* Secondly, as Marketcoin doesn't need to deal with zero-confirmation payments, the behaviour for dealing with broadcast orders/transactions will be different to that of Bitcoin. By allowing orders with a higher fee to replace those with a lower fee, orders can be updated or used in a transaction.
+
+The latter is not as easy to apply to Altcoin orders on the Marketcoin network, and will need more thought.
+
+### notes
 
 * requirement to add tx and location in altcoin blockchain is sufficient since the PoW was done (altcoin block has hash <= diff); does it allow miners to manipulate market since altcoin block will probably produce marketcoin block too? marketcoin reference to current block *cannot* be a block it was simultaneously generated with? (Edit: not sure exactly why I thought this was an issue; not positive it is).
 
