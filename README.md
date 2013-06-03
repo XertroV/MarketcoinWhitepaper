@@ -104,7 +104,7 @@ The latter is not as easy to apply to Altcoin orders on the Marketcoin network, 
 
 ## Issues
 
-Some sort-of-counter-party risk-stuff is assumed by seller of Marketcoin - lose access to coins for 24 hrs. None for buyer unless prevented sending tx on altcoin network (51% attack), or including soln in marketcoin block.
+Some sort-of-counter-party risk-stuff is assumed by seller of Marketcoin - lose access to coins for up to 24 hrs (the escrow period). None for buyer unless prevented sending tx on altcoin network (51% attack), or including soln in marketcoin block.
     Altcoin reorg should not effect marketcoin. Users are left to accept transactions whenever they choose.
 
 Timeouts might conflict if altcoin takes too long to produce blocks. Support must be general. Perhaps doing a difficulty style adjustment based on number of blocks over last retarget period (measured in time). Will be weird if a block is produced in more time than the retarget takes (misses a retarget period). Probably not worth considering yet.
