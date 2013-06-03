@@ -133,6 +133,10 @@ The above is feasable, I think. **RFC: Above paragraph; on new altcoin<->marktco
 
 * not sure **integration with PoS** is possible currently; merged-mining not compatiable as far as I can tell. Difficult to validate PoS without entire blockchain (need to get txouts and coinage).
 
+### signed tx valid on two networks?
+
+I suspect signed transactions are valid on similar cryptocoins; at least when pubkeys are used (addresses might break this, thankfully). Coins would require identical inputs, which is difficult, granted (maybe only coinbase transactions?). *RFC*
+
 ## Random Notes and Glossary
 
 * Market volume provides rough scaling between PoW systems on a network wide level.
