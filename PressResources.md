@@ -26,7 +26,7 @@ Furthermore, the Marketcoin blockchain does not resemble any existing PoW chain.
 
 There are still many aspects of Marketcoin to discuss and decide, and any or all of what I've said here might not ever be implemented if a better idea comes along. This is the opportunity to engineer a market, something that little thought has previously been dedicated.
 
-I have many ideas as to where Marketcoin coin should differ to Bitcoin, beyond what I've transcribed here, such as demurrage - which I believe will reduce speculation in Marketcoin and create a more liquid market as trades will need to be made twice (once in, once out). These are the fine points that help tune a market to efficiency without any effect on the implied exchange rate of two currencies, and as such cannot be ignored.
+I have many ideas as to where Marketcoin coin should differ to Bitcoin, beyond what I've transcribed here, such as demurrage - which I believe will reduce speculation in Marketcoin and create a more liquid market as speculatory trades will need to be made twice (once in, once out). These are the fine points that help tune a market to efficiency without any effect on the implied exchange rate of two currencies, and as such cannot be ignored.
 
 # Links
 
