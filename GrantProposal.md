@@ -14,7 +14,7 @@ This application is seeking a grant from the Bitcoin Foundation in order to help
 
 ## Overview
 
-Marketcoin is a project aiming to develop a new alt-coin which does not function as a currency so much (Bitcoin already does a good job of that) but functions as a currency exchange for potentially any crypto-currency built over the Bitcoin protocol.
+Marketcoin is a project aiming to develop a new alt-coin which does not function as a currency so much (Bitcoin already does a good job of that) but functions as a currency exchange for potentially any crypto-currency built from the Bitcoin protocol.
 
 The project will be forked from Bitcoin and will have a very similar network structure. This means that the project is not directly monetizable and offers no more potential reward for the creator than any other member of the community (in a similar fashion to Bitcoin).
 
