@@ -78,7 +78,7 @@ Some resources will need SSL certificates to ensure users' security, such as the
 
 ## Methodology
 
-
+Items listed above will be paid for as they are needed.
 
 ## Estimated costs/budget
 
