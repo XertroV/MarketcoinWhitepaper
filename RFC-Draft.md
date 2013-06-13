@@ -4,9 +4,9 @@
 
 This document is a draft for the RFC topic on Bitcointalk in the Altchain subforum. It should not be published till the authors can agree, and should be posted under the Marketcoin user, currently controlled by Max Kaye.
 
-# [RFC] - Marketcoin - The trustless decentralised cryptocoin exchange.
+# [RFC] - Marketcoin - a distributed p2p transactional value exchange network with no counterparty risk; impervious to outside influence or control.
 
-Marketcoin is a new altchain with its own currency. The network creates a trustless distrubuted exchange between most types of altchains.
+Marketcoin is a new altchain with its own currency. The network creates a trustless distrubuted exchange between most types of altchains. Marketcoin is only able to trade between cryptocurrencies.
 
 Max would like Marketcoin to be as open as possible to give it the best chance of a successful launch and continued operation. No code has yet been created to be worked on, currently this is in the whitepaper stage.
 
@@ -35,13 +35,14 @@ Benefits include:
 * Does not require alteration to Altcoins. Transactions made are standard.
 * Fair market. No spread. Tiny fee (like Bitcoin).
 * No native Proof of work function; market security based on parent chain security.
+* Allows trustless trading between forked chains (in the case of a network split).
 * MORE
 
 ### Comparison to other alt chains
 
 There are no comparible alt chains in existance to the authors' knowledge.
 
-Marketcoin differs on many fronts. There is a novel blockchain implementation and an expansion to transactions, in order to facilitate the particular requirements of the network.
+Marketcoin differs on many fronts. There is a novel blockchain implementation and an expansion to transactions in order to facilitate the particular requirements of the network.
 
 ### Merged mining
 
@@ -50,13 +51,17 @@ Marketcoin (MKC) requires each currencypair be merged-mined with the parent chai
 ### Shortcomings
 
 * Not instant (still very quick, though)
-* Block re-orgs on alternate chains may disrupt the market in a similar fashion to accepting zero-conf transactions.
-* Still more work to do with issues (see whitepaper)
-* Cannot trade with other marketcoin-like systems. Proof of payment is required to gain control of funds, if this is required on two networks neither transaction can be completely satisfied without additional protocol changes. I believe this *is* possible if orders (pledging the MKC as per the requirements of a buy order proves intent to pay at the very least)
+* Block re-orgs on alternate chains may disrupt the market with similar consequences to accepting zero-conf transactions, easily mitigated.
+* Issues and attack vectors are not well discussed yet.
+* Cannot trade with other marketcoin-like systems. Proof of payment is required to gain control of funds, if this is required on two networks neither transaction can be completely satisfied without additional protocol changes. Protocol changes are required to facilitate this.
+* Proof-of-Work algorithms and valid block criteria, etc, for each altcoin must be known to marketcoin as it must validate altcoin blocks to ascertain proof of payment. This means hard-fork changes to a traded currency will mean a hardfork change to marketcoin :(
+* MORE
 
 ### Attacks
 
 * As Marketcoin requires merged mining with parent chains large amounts of hashing power injected into parent chains may disrupt the market in the same way they disrupt the parent chains. Marketcoin itself is immune from this attack at a network level as all PoW is offloaded onto parent chains.
+* Trading can be halted for a short while by an attacker but they will quickly lose their MKC pledges to miners.
+* MORE
 
 ### License
 
@@ -70,10 +75,14 @@ Marketcoin (MKC) requires each currencypair be merged-mined with the parent chai
 3. *Mainnet start date:* Not yet determined.
 4. *Exchange open date:* Not required but advantageous. If exchanges would like assistance having infrastructure ready for day 1, please contact the development team.
 
-### A note on exchanges
+### A note on transactions/trades
 
-To avoid spam, Marketcoin orders require a 'pledge' of MKC. This is the maximum exchange amount for sell orders and a % for buy orders. As this can be prohibitive for those entering Marketcoin exchanges may wish to enable exchange of MKC for impatient folk to acquire MKC faster than the network can provide (in terms of trading in).
+To avoid spam, Marketcoin orders require a 'pledge' of MKC. This is the maximum exchange amount for sell orders and a % for buy orders. As this can be prohibitive for those entering Marketcoin, exchanges may wish to enable exchange of MKC for impatient folk to acquire MKC faster than the network can provide (in terms of 'trading in').
 
 # Authors
 
-Max Kaye
+* Max Kaye
+
+# Thanks
+
+* Tod Gillespie
