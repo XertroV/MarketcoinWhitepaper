@@ -30,6 +30,8 @@ The reason for the limited nature of this proposal is two-fold. First and foremo
 
 The nature of the grant process means that if a small initial grant proves worth while and assists the creation and fruition of Marketcoin and its would-be-community, subsequent grants can be applied for, thus by deferring a grant proposal for development funding the viability of the project can be properly evaluated at minimum risk.
 
+The timeframe for this proposal is 2 quarters. The budget below reflects this. At the end of this period I (or the community) will apply for another grant if required.
+
 ### Overview of Marketcoin
 
 Marketcoin is a project aiming to develop a new alt-coin which does not function as a currency so much (Bitcoin already does a good job of that) but functions as a currency exchange for potentially any crypto-currency built from the Bitcoin protocol.
@@ -78,12 +80,48 @@ Some resources will need SSL certificates to ensure users' security, such as the
 
 ## Methodology
 
-Items listed above will be paid for as they are needed.
+Items listed above will be paid for as they are needed. Software solutions will be completely open source, including the main site (I suspect forking the Bitcoin site is the best way to go in the beginning).
+
+As Marketcoin will be forked from Bitcoin many applications will be cross compatible (like the faucets) and these will be employed where possible.
+
+Servers will be setup with well supported distributions such as Ubuntu 12.04 LTS using standard packages such as Apache2, MySQL, and PHP5.
 
 ## Estimated costs/budget
 
+As the project develops more servers will be required. Two possible extremes are presented below to reflect the bounds of the budget.
 
+Firstly, a fast, overly ideal timeline over 6 months:
+* 3 servers for the main site, forums and wiki immediately. [18 server-months]
+* Domains and SSL certs for forums and wiki immediately. [2 domain-ssl combos]
+* Code testing server immediately. [6 server-months]
+* 2 testnet seeds in 1 month's time. [10 server-months]
+* Testnet faucet, domain and SSL cert in 1 month's time. [1 domain-ssl combo and 5 server-months]
+* 2 mainnet seeds in 3 month's time. [6 server-months]
+* Mainnet faucet, domain and SSL certificate in 3 month's time. [1 domain-ssl combo and 3 server-months]
+
+This adds to 4 domain-ssl combos ((US10 + US30) * 4 = US160) and 48 server-months (48 * US40 = US1920). A grand total of US2080. At current exchange rates this is ~19 BTC.
+
+A more realistic timeline over 6 months:
+* 1 server for the main site, forums and wiki immediately. [6 server-months]
+* SSL certificate for forums and wiki (and main site) immediately. [1 SSL certificate]
+* Code testing server immediately. [6 server-months]
+* 2 testnet seeds in 3 months time. [6 server-months]
+* Testnet faucet, domain and SSL certificate in 3 month's time. [1 domain-ssl combo and 3 server-months]
+* Mainnet seeds not needed.
+* Mainnet faucet not needed.
+
+This adds to 2 domains (US20), 1 SSL certificate (US30), and 21 server-months (21 * US40 = US840). A grand total of US890, or ~8 BTC at current exchange rates.
+
+I only consider the last timeline truly feasible. This proposal therefore asks for 14 BTC from the foundation to assist in the creation of this infrastructure. 
+
+I am asking for more than 8 BTC for two reasons. Firstly, if progress is faster than anticipated then there is a buffer, and secondly the BTC exchange rate is volatile and in accordance with paying for things on a when-needed basis there is necessary exposure to exchange rates.
+
+Prices were estimated based on approximate cost of domains, cheaper SSL certificates, and the 2GB Linode package.
 
 ## Qualifications
 
-Qualifications needed to complete this are ill defined at best due to the lack of applicable courses to provide relevant qualification.
+The main requirement to fulfil the proposal is experience with server infrastructure and management. In addition, some programming experience will be needed in areas such as HTML and JS, PHP or another language relevant to web development, and possibly other more general languages such as Python. The reason these were given as an example is because the author has experience in these particular languages (among others).
+
+Currently the author is working as a web developer for a reputable organisation. If the Foundation would like more details and references the author would be happy to provide them over private communications.
+
+I have no relevant formal qualifications. I've completed two university level software courses achieving a mark of 86 (high distinction) in Intro to Artificial Intelligence (3rd year course from the University of Sydney) and 77 (distinction) in Advanced Informatics (1st year course form the University of Sydney). Academic records can be provided upon request.
