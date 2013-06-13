@@ -12,7 +12,7 @@ I spoke to Lindsay, Peter and Gavin about this idea during Bitcoin2013 and the u
 
 ## Proposal and Clarification
 
-This application is seeking a grant from the Bitcoin Foundation in order to help facilitate (but not fund) the development of Marketcoin - a Bitcoin-like system which enables trustless exchange between crypto-currencies - through the development of infrastructure needed to support an opensource project and the associated community. This will modeled on the current infrastructure supporting Bitcoin development and the Bitcoin community. This will mostly be comprised of renting servers.
+This application is seeking a grant from the Bitcoin Foundation in order to help facilitate (but not fund) the development of Marketcoin - a Bitcoin-like system which enables trustless exchange between crypto-currencies - through the development of infrastructure needed to support an opensource project and the associated community. This will be modeled on the current infrastructure supporting Bitcoin development and the Bitcoin community. This will mostly be comprised of renting servers and purchasing domains and SSL certificates.
 
 Particularly, the services and products under the :
 
@@ -32,15 +32,29 @@ The nature of the grant process means that if a small initial grant proves worth
 
 The timeframe for this proposal is 2 quarters. The budget below reflects this. At the end of this period I (or the community) will apply for another grant if required.
 
-### Overview of Marketcoin
+Currently, information - including the partially written whitepaper - on Marketcoin can be found on [GitHub](https://github.com/XertroV/MarketcoinWhitepaper/)
+
+### Overview of Marketcoin and the Bitcoin philosophy
 
 Marketcoin is a project aiming to develop a new alt-coin which does not function as a currency so much (Bitcoin already does a good job of that) but functions as a currency exchange for potentially any crypto-currency built from the Bitcoin protocol.
 
 The project will be forked from Bitcoin and will have a very similar network structure. This project is not aiming to run as a business or make money and it offers no more potential reward for the creator(s) than any other member of the community (in a similar fashion to Bitcoin). This is not a business idea, this is a decentralised network like Bitcoin.
 
+#### A brief overview of Marketcoin
+
+Marketcoin facilitates trustless exchange of cryptocurrencies. Marketcoin, like Bitcoin, is a trustless system operated and maintained by its users. Just as Bitcoin challenges the status quo of currency, Marketcoin will challenge the status quo of currency markets. This decentralised cryptocurrency exchange will prompt new standards of acceptable counter-party risk, fairness, transparency, and accessibilty.
+
+Marketcoin is a new cryptocurrency in its own right, though works very similarly to Bitcoin: the blockchain facilitates a system of distributed value generation, transactions are based on public and private keys, there is no counter-party risk to hold or transfer, and there is no central authority.
+
+But Marketcoin, unlike Bitcoin, implements a novel blockchain structure and enhanced transaction functionality which allows the network to interface with each alternate chain. In addition, Marketcoin rejects contemporary market auction systems in order to prevent manipulation and HFT.
+
+Marketcoin operates in a unique way. Orders are submitted on both sides of the exchange. Once a block is produced, orders are ranked on both sides of the exchange from highest to lowest bid and progressively matched. For example, during a Bitcoin/Marketcoin trade, the order which pays the most Marketcoin for one Bitcoin is matched with the order which pays the most Bitcoin for one Marketcoin. The bid and ask are then averaged, and this is the exchange value for that particular match.
+
+#### Marketcoin and the Bitcoin philosphy
+
 Marketcoin may attain several important functions within the crypto-currency community which build upon and reinforce the values and philosophy embedded in Bitcoin.
 
-Firstly, Bitcoin may not be able to scale easily - or be worth scaling - to the point where it can accomodate all manner of transactions taking place globally. Furthermore, Bitcoin may not be economically suitable for every community, and has no economic benefits specific to small real world communities (such as a small town). Thus, Bitcoin may not be the optimum choice of currency for some communities. Despite this, Bitcoin shows the potential for incredible innovation and dynamism within the world of alternate and complementary currencies. In order to facilitate the widest possible adoption of Bitcoin and the Bitcoin philosophy, there should be some method for communities to create a crypto-currency with particular properties that provide extra-economic benefit to said community (which could be as simple as forking the source code and writing some legislation), however, this potential may be crippled if there is not a method of moving value between alt-chains in a trustless and standardised manner. Marketcoin allows crypto-currencies to become separated from the current trust-based model of exchange commonly used today.
+Firstly, Bitcoin may not be able to scale easily - or be worth scaling - to the point where it can accomodate all manner of transactions taking place globally in accordance with its growth. Furthermore, Bitcoin may not be economically suitable for every community, and has no economic benefits specific to small real world communities (such as a small town). Thus, Bitcoin may not be the optimum choice of currency for some communities. Despite this, Bitcoin shows the potential for incredible innovation and dynamism within the world of alternate and complementary currencies. In order to facilitate the widest possible adoption of Bitcoin and the Bitcoin philosophy, there should be some method for communities to create a crypto-currency with particular properties that provide extra-economic benefit to said community (which could be as simple as forking the source code and writing some legislation), however, this potential may be crippled if there is not a method of moving value between alt-chains in a trustless and standardised manner. Marketcoin allows crypto-currencies to become separated from the current trust-based model of exchange commonly used today.
 
 Secondly, Bitcoin plays the most significant role in the crypto-currency community today. I believe that one of Bitcoin's future roles in the global economy will be the ultimate "long distance" money. While it is true that all crypto-currencies have the potential for instant worldwide transfer, if you wish to exchange village-coin-1 for village-coin-2 there needs to be some method of exchange. While Marketcoin can provide trustless exchange between crypto-currencies, there are scaling issue in the planned network architecture where the number of currency-pairs used and the average time to find a block are proportionally related. If multiple markets based on Marketcoin emerge (to cater to different geographical areas, or perhaps themes of currencies, etc) it is required than an intermediate crypto-currency be used to move between exchanges due to Marketcoin's inability to directly trade with forks of Marketcoin. Bitcoin has the possibility of fulfilling this need due to the security of the network and potentially ubiquitous acceptance (between Marketcoin exchanges). This helps to solidify Bitcoin's role in world economics as the super-currency which helps secure and facilitate a proliferation of new, novel, and innovative community and complementary currencies.
 
@@ -122,6 +136,6 @@ Prices were estimated based on approximate cost of domains, cheaper SSL certific
 
 The main requirement to fulfil the proposal is experience with server infrastructure and management. In addition, some programming experience will be needed in areas such as HTML and JS, PHP or another language relevant to web development, and possibly other more general languages such as Python. The reason these were given as an example is because the author has experience in these particular languages (among others).
 
-Currently the author is working as a web developer for a reputable organisation. If the Foundation would like more details and references the author would be happy to provide them over private communications.
+Currently I'm working as a web developer for a reputable organisation. If the Foundation would like more details and references I'd be happy to provide them over private communications.
 
 I have no relevant formal qualifications. I've completed two university level software courses achieving a mark of 86 (high distinction) in Intro to Artificial Intelligence (3rd year course from the University of Sydney) and 77 (distinction) in Advanced Informatics (1st year course form the University of Sydney). Academic records can be provided upon request.
