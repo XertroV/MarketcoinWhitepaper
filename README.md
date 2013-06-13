@@ -4,6 +4,8 @@ Draft for public comment and contribution.
 
 If you have any query or contibution in regards to this paper, please raise an issue. This includes but is not limited to: if something is not clear enough, or you think you've spotted something that needs to be considered.
 
+**Max would like this to be as open and free as possible**, this includes writing the Whitepaper, RFC, ANN, Press info, *and* development.
+
 ## Abstract
 
 A peer-to-peer decentralized exchange system would allow the users of a currency market to also be the govening body. Removed from the burdon of an external regulatory body would allow such markets to become truly free. Furthermore, facilitating relationships between crypto-currencies enables greater monetary diversity, something that is required if economies are to become resilient to negative effects of their chosen monetary systems. We propose a system that expands upon Bitcoin to enable trustless, peer to peer exchange of Bitcoin-like currencies. By allowing the proof of work chain to be a culmination of several smaller chains representing each currency pair, markets can remain resilient from the impacts of one another, while still conserving the cryptographic advantages bestowed by the virtue of being a crypto-currency. In addition, our system is largely incompatible with modern high performance computing algorithms; instead of instantaneous trade, orders are culminated into a block, and then algorithmically matched. This prevents most HPC exchange strategies and eliminates the spread. 
@@ -14,15 +16,26 @@ Marketcoin intro and context
 
 Everything -> Marketcoin and Marketcoin -> Everything (but not Everything -> Everything)
 
-Marketcoin provides a better solution to the double coincidence of wants by allowing users to quickly and trustlessly exchange value between monetary systems. This allows the solutions to the double coincidence (monetary systems) to become separate and insulated, while being trivially connected at the same time. This means that both parties can deal in their currency of choice without any significant barriers to exchange goods and services for money.
+Marketcoin provides a better solution to the double coincidence of wants by allowing users to quickly and trustlessly exchange value between monetary systems. This allows the solutions to the double coincidence (monetary systems) to become separate and insulated in ideas and values, while being technologically connected at the same time. Thus both parties can deal predominantly in their currency of choice without any significant barriers to exchange goods and services for money.
 
-## Orders and Transactions
+## Orders, Transactions and Exchanges
 
-Transactions in Marketcoin differ from those of Bitcoin-like systems. A transaction is broken down into three parts, and is not finalised until all of those parts are present in the blockchain. The first two are matching orders; that being an order to buy Altcoin for the maximum price of m, and an order to sell Altcoin at the minimum price of n, with n <= m. These are combined to form the beginning of a transaction, and are recorded simultaneously in the blockchain. The exchange algorithm is such that any two nodes will always produce the same matching orders from the same input (the block). Both orders include the public key of each party member. At this stage, the transaction is not yet finalised. For finalisation to occur the buyer of Marketcoin must provide a signed transaction for the agreed upon amount from their public key on the altcoin network, to the seller's public key. This alone does not provide proof of payment, to combat this a reference to the block the transaction was published in is also required. After this, control over the disbursement of the kets (marketcoin units) purchased is granted. Control over the disbursement of the kets is removed once an order is included for their sale in a block.
+Transactions, or exchanges, in Marketcoin are comprised of three elements. Two orders (one to buy MKC and one to sell) and a finalisation. The transaction is not completed until the finalisation has been included in the blockchain.
 
-To combat users reneging on trades and locking up others' money a timeout is placed on every transaction; if it is not finalised within a certain number time (or number of blocks, to be decided), the transaction is disregarded and control of the disbursement of funds is returned to the seller.
+### Orders
 
-As there only needs to be one party to complete any actions after the orders are matched the finalisation of the transfer is the complete onus of the buyer. 
+Orders are for the buying and selling of Marketcoin for some supported cryptocurrency.
+In order for a buy order at price m to be matched with a sell order at price n it is required that n <= m. Once matched in a block, these orders are combined to form the beginning of a transaction, and are recorded simultaneously in the blockchain. 
+
+Once this has occurred control of the MKC being sold is relinquished by the seller.
+
+The exchange algorithm is such that any two nodes will always produce the same matching orders from the same input (the block). Both orders include the public key of each party member. At this stage, the transaction is not yet finalised. For finalisation to occur the buyer of Marketcoin must provide a signed transaction for the agreed upon amount on the altcoin network, to the seller's specified public key. This alone does not provide proof of payment, so in addition a reference to the block the transaction was published in is also required. 
+
+Once the finalisation has been published the control of MKC bought falls to the buyer.
+
+To combat users reneging on trades and locking up others' money indefinitely, two tactics are employed. Firstly, a timeout is placed on every transaction; if it is not finalised within a certain length of time (or number of blocks, to be decided), the transaction is disregarded and control of the disbursement of funds is returned to the seller. In addition, the buyer must pledge some MKC (perhaps 1% of the volume of MKC being bought) which is returned to her only upon successful finalisation of the transaction; if the transaction times out that MKC is absorbed by the network - either given to the person who was inconvenienced or to miners as a fee.
+
+Once orders are matched in a block all onus to complete the transaction falls to the buyer of MKC. Because of this, they are the only party required to pledge funds they may lose if they renege.
 
 At the matching stage of the buyer only a little information is known:
 
@@ -30,7 +43,23 @@ At the matching stage of the buyer only a little information is known:
 * Pubkey of Buyer
 * Amount each way
 
-To finalize this transaction (and avoid relaying excess data) the finalisation of the transaction takes place on Altcoin with a TX for the *amount* to *pubkey of seller*; then included in marketcoin blockchain as evidence (must have been in altcoin blockchain first; referenced through altcoin blockheaders included in MKC blockchain).
+There are several steps that must be required for finalisation to be accepted by the Marketcoin network:
+
+1. Transaction for specified amount made on Altcoin network to the pubkey provided by the seller. (TX1)
+2. TX1 is included in an Altcoin block.
+3. TX1 is broadcast to Marketcoin with details of which block it was included in, merkle tree position, etc.
+4. If it is within 24hrs or so Marketcoin will be checking cached altchain blocks to verify a transaction was included in the block and not just the txid in the merkle tree. This is to guard against miners on the altchain forging proof of payment. If the finalisation occurred more than 24hrs ago it is assumed the tx was included.
+5. Once Marketcoin knows about the proof of payment disbursement rights to the original MKC to be bought are given to the buyer.
+
+### Mitigating spam
+
+Marketcoin involves a 'pledge' on both sides of the trade, indicating the intention to fulfil that trade.
+
+The seller of MKC pledges the maximum amount she is willing to spend. Once the order is included a block the funds are made unavailable and will remain so unless the trade fails, in which case all of the pledge is returned.
+
+The buyer of MKC pledges an amount proportional to her order. Unlike the seller of MKC these coins will only be returned if the trade is successful. If the buyer fails in her obligations she sacrifices her pledge to the network (collected as a miner's fee).
+
+As users lose control of disbursement of some MKC when making a trade they diminish their own ability to manipulate the exchange (every trade is a manipulation, after all). This means that spammers will rapidly diminish their coffers if they attempt to spam or flood the network.
 
 ### Cancelling orders
 
@@ -45,18 +74,21 @@ The latter is not as easy to apply to Altcoin orders on the Marketcoin network, 
 
 * requirement to add tx and location in altcoin blockchain is sufficient since the PoW was done (altcoin block has hash <= diff); does it allow miners to manipulate market since altcoin block will probably produce marketcoin block too? marketcoin reference to current block *cannot* be a block it was simultaneously generated with? (Edit: not sure exactly why I thought this was an issue; not positive it is).
 
-* Mining attack
+#### Mining attack and mitigation
+
 * Include hash of tx in Altcoin merkle root; but not in the block. In the block is a conflicting tx that spends the output, also in merkle root. By including conflicting tx there is a doublespend and those coins cannot be redeemed.
 * Trade Matched; Miner waits to include block with conflicting tx and hash of the finasation tx in merkle tree; Broadcasts broken solution to marketcoin network; confirming the transaction.
 * Perhaps miners are asked to validate all trades on altcoin network; not just in merkle tree but also in block. Connect to altcoind armory style?
 * So BTC/MKC miners check bitcoin blocks for tx finalisations to ensure they really are there. Do not accept block as valid if inconsistancies detected?
 * Blocks from all altcoins kept for 24 hours? 288 blocks: the cutoff?. **MIGHT JUST WORK**
 
-* How then to deal with Altcoin chainforks? and if bitcoin blcok in marketcoin is detected as invalid miners of OTHER currencies will still build on the block. Although BTC/MKC miners could detect the invalidity, LTC/MKC miners would not, and will build on the invalid block.
+#### Altchain forks
 
-* How much trash can someone put in the merkle tree? How likely is it for an random hash to be in the merkle tree?
+How then to deal with Altcoin chainforks? and if bitcoin block in marketcoin is detected as invalid miners of OTHER currencies will still build on the block. Although BTC/MKC miners could detect the invalidity, LTC/MKC miners would not, and will build on the invalid block. *Validation rules included for every merged currency* - lots of hardforks maybe?
 
-* Dynamic block requests? Can you request LTC block through MKC network? Perhaps.
+How much trash can someone put in the merkle tree? How likely is it for an random hash to be in the merkle tree? [probably not a worry, see solns above]
+
+Dynamic block requests? Can you request LTC block through MKC network? Need to be able to in order to validate tx's from all networks
 
 ## Proof-of-Work Chain (blockchain)
 
