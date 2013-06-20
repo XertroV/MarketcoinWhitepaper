@@ -50,6 +50,8 @@ But Marketcoin, unlike Bitcoin, implements a novel blockchain structure and enha
 
 Marketcoin operates in a unique way. Orders are submitted on both sides of the exchange. Once a block is produced, orders are ranked on both sides of the exchange from highest to lowest bid and progressively matched. For example, during a Bitcoin/Marketcoin trade, the order which pays the most Marketcoin for one Bitcoin is matched with the order which pays the most Bitcoin for one Marketcoin. The bid and ask are then averaged, and this is the exchange value for that particular match.
 
+More information about Marketcoin, including the very-in-progress whitepaper can be found here: 
+
 #### Marketcoin and the Bitcoin philosphy
 
 Marketcoin may attain several important functions within the crypto-currency community which build upon and reinforce the values and philosophy embedded in Bitcoin.

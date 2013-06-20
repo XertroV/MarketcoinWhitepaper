@@ -30,9 +30,9 @@ Benefits include:
 
 * Trustless exchange
 * Open exchange
-* Compatible with any merge-mineable chain. Unsure about Proof of Stake chains.
+* Compatible with any merge-mineable chain. Should be compatible with PoW elements of hybrid PoS/PoW chains.
 * No additional infrastructure required besides the Marketcoin client
-* Does not require alteration to Altcoins. Transactions made are standard.
+* Does not require alteration to Altcoin policy. Transactions are required to be standard.
 * Fair market. No spread. Tiny fee (like Bitcoin).
 * No native Proof of work function; market security based on parent chain security.
 * Allows trustless trading between forked chains (in the case of a network split).
