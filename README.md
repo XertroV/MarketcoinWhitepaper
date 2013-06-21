@@ -2,13 +2,13 @@
 
 Draft for public comment and contribution.
 
-If you have any query or contibution in regards to this paper, please raise an issue. This includes but is not limited to: if something is not clear enough, or you think you've spotted something that needs to be considered.
+If you have any query or contribution in regards to this paper, please raise an issue. This includes but is not limited to: if something is not clear enough, or you think you've spotted something that needs to be considered.
 
 **Max would like this to be as open and free as possible**, this includes writing the Whitepaper, RFC, ANN, Press info, *and* development.
 
 ## Abstract
 
-A peer-to-peer decentralized exchange system would allow the users of a currency market to also be the govening body. Removed from the burdon of an external regulatory body would allow such markets to become truly free. Furthermore, facilitating relationships between crypto-currencies enables greater monetary diversity, something that is required if economies are to become resilient to negative effects of their chosen monetary systems. We propose a system that expands upon Bitcoin to enable trustless, peer to peer exchange of Bitcoin-like currencies. By allowing the proof of work chain to be a culmination of several smaller chains representing each currency pair, markets can remain resilient from the impacts of one another, while still conserving the cryptographic advantages bestowed by the virtue of being a crypto-currency. In addition, our system is largely incompatible with modern high performance computing algorithms; instead of instantaneous trade, orders are culminated into a block, and then algorithmically matched. This prevents most HPC exchange strategies and eliminates the spread. 
+A peer-to-peer decentralised exchange system would allow the users of a currency market to also be the governing body. Removed from the burden of an external regulatory body would allow such markets to become truly free. Furthermore, facilitating relationships between crypto-currencies enables greater monetary diversity, something that is required if economies are to become resilient to negative effects of their chosen monetary systems. We propose a system that expands upon Bitcoin to enable trustless, peer to peer exchange of Bitcoin-like currencies. By allowing the proof of work chain to be a culmination of several smaller chains representing each currency pair, markets can remain resilient from the impacts of one another, while still conserving the cryptographic advantages bestowed by the virtue of being a crypto-currency. In addition, our system is largely incompatible with modern high performance computing algorithms; instead of instantaneous trade, orders are culminated into a block, and then algorithmically matched. This prevents most HPC exchange strategies and eliminates the spread. 
 
 ## Introduction
 
@@ -76,11 +76,15 @@ The latter is not as easy to apply to Altcoin orders on the Marketcoin network, 
 
 #### Mining attack and mitigation
 
+Not sure what I was thinking when writing this. Merkle tree generation is deterministic in Bitcoin and does not allow arbitrary data. Only place for arbitrary data is the coinbase tx.
+
+**Probably silly and irrelevant now**
+
 * Include hash of tx in Altcoin merkle root; but not in the block. In the block is a conflicting tx that spends the output, also in merkle root. By including conflicting tx there is a doublespend and those coins cannot be redeemed.
-* Trade Matched; Miner waits to include block with conflicting tx and hash of the finasation tx in merkle tree; Broadcasts broken solution to marketcoin network; confirming the transaction.
+* Trade Matched; Miner waits to include block with conflicting tx and hash of the finalisation tx in merkle tree; Broadcasts broken solution to marketcoin network; confirming the transaction.
 * Perhaps miners are asked to validate all trades on altcoin network; not just in merkle tree but also in block. Connect to altcoind armory style?
-* So BTC/MKC miners check bitcoin blocks for tx finalisations to ensure they really are there. Do not accept block as valid if inconsistancies detected?
-* Blocks from all altcoins kept for 24 hours? 288 blocks: the cutoff?. **MIGHT JUST WORK**
+* So BTC/MKC miners check bitcoin blocks for tx finalisations to ensure they really are there. Do not accept block as valid if inconsistencies detected?
+* Blocks from all altcoins kept for 24 hours? 288 blocks: the cutoff?. *MIGHT JUST WORK*
 
 #### Altchain forks
 
@@ -96,7 +100,7 @@ Dynamic block requests? Can you request LTC block through MKC network? Need to b
 
 * Each Marketcoin block links to the previous, regardless of the currency pair it was mine on. 
 
-* Each block includes sequential headers of unincluded Altcoin blocks, upto some maximum.
+* Each block includes sequential headers of not-yet-included Altcoin blocks, up to some maximum.
 
 * Each block MUST be merged mined with the Altcoin blockchain. Marketcoin has no native PoW system.
 
@@ -106,7 +110,7 @@ Dynamic block requests? Can you request LTC block through MKC network? Need to b
 
 ## Block Validation
 
-* Verfity all finalisations of transactions have txid in merkle tree
+* Verify all finalisations of transactions have txid in merkle tree
 * Verify PoW is valid (using altchain PoW alg with altchain block header)
 * Verify MKC hash is in altcoin block header's merkle tree
 * Verify MKC transactions and merkle tree
@@ -126,13 +130,13 @@ Dynamic block requests? Can you request LTC block through MKC network? Need to b
 * Each retarget period is treated to a small decrease in pool reward size, a continuous function as opposed to Satoshi's step function. 
 * This means there is still a provably limited supply; in addition, periods of growth will be treated to faster increases in supply, providing not only economic benefit, but also reducing the maturation period of Marketcoin.
 
-## Reward degredation
+## Reward degradation
 
-* Current plan for block reward degredation
+* Current plan for block reward degradation
 * Each block reward pool is 0.9976 of the previous retarget size.
 * IE: -0.24% every retarget period.
 * MAX COINS: 21,000,000 exactly
-* Half coins in existance: 288 weeks ish = ~5.5 years (also when block reward is half of orig)
+* Half coins in existence: 288 weeks ish = ~5.5 years (also when block reward is half of orig)
 
 ## Issues
 
@@ -159,11 +163,11 @@ Merged mining means a hash of the bitcoin block is in the marketcoin block heade
 * Allows a period for new cryptocurrencies to compete for spots - requirements on market volume by the end of a trial period?
 * Not sure if it can be done in a distributed fashion yet.
 
-Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be) blocks continaing the new magicbits can be mined.
+Perhaps there can be an automatic voting system; blocks produced all contain a vote on currencies to include or exclude; when enough support is gained (probably needs to be 50%+ to align with other behaviours of the network; actually, strike that, not sure it matters as long as there is concensus on what the % should be) blocks containing the new magicbits can be mined.
 
-The above is feasable, I think. **RFC: Above paragraph; on new altcoin<->marktcoin currency paris**.
+The above is feasible, I think. **RFC: Above paragraph; on new altcoin<->marktcoin currency paris**.
 
-* not sure **integration with PoS** is possible currently; merged-mining not compatiable as far as I can tell. Difficult to validate PoS without entire blockchain (need to get txouts and coinage).
+* not sure **integration with PoS** is possible currently; merged-mining not compatible as far as I can tell. Difficult to validate PoS without entire blockchain (need to get txouts and coinage).
 
 ### signed tx valid on two networks?
 
