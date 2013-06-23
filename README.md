@@ -173,6 +173,14 @@ The above is feasible, I think. **RFC: Above paragraph; on new altcoin<->marktco
 
 I suspect signed transactions are valid on similar cryptocoins; at least when pubkeys are used (addresses might break this, thankfully). Coins would require identical inputs, which is difficult, granted (maybe only coinbase transactions?). *RFC*
 
+## Properties of coins
+
+I previously was considering demurrage, but am reconsidering this now. The idea was to give the market more liquidity by incentivising trading out once you trade in; however, not only may this disincentives speculation (which does add liquidity to some degree), if the average individual does just trade in and trade out straight away, it won't matter in any case.
+
+If demurrage really is a useful feature for the market, the Marketcoin will be forked and it will be added. I might even write the code.
+
+At this time, I don't think demurrage will be included
+
 ## Random Notes and Glossary
 
 * Market volume provides rough scaling between PoW systems on a network wide level.
