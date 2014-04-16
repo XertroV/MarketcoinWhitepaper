@@ -192,3 +192,4 @@ Satoshi - Bitcoin Whitepaper, 2008
 ## Authors:
 
 * XertroV (Max Kaye)
+* Jack Murray
